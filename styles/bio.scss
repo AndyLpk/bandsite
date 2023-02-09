@@ -81,3 +81,130 @@ img {
     } 
 }
 
+
+// banner
+
+.banner {
+    
+    background-image: url(../assets/images/hero-bio.jpg); 
+    background-color: rgba(0, 0, 0, 0.473);
+    background-blend-mode: darken ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start ;
+    padding-bottom: 2rem;
+    width: 100%;
+    
+    
+
+    &__title {
+        color: white;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        padding-left: 1rem;
+        margin-top: 5rem;
+    }
+}
+
+// intro 
+
+.intro {
+
+    font-weight: 600;
+    padding-right: 1rem;    
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+
+    &__title {
+        font-size: 1.5rem;        
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        
+    }
+
+    &__img {
+        // need to fix the img 
+        
+    }
+
+    &__sub {
+        font-size: 0.9rem ;
+        font-weight: 700;
+        line-height: 1.375rem;
+    }
+}
+
+// main text
+
+.main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+
+    &__title {
+        margin-top: 0;
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+
+    &__description {
+        font-size: 0.8125rem;
+        font-weight: 400;
+    }
+
+}
+
+
+// gallery
+
+
+.img {
+    padding: 1rem;
+    background-color: rgba(192, 192, 192, 0.1);
+
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        padding-top: 1rem;
+    }
+
+    &__list {
+        padding-top: 1rem;
+    }
+}
+
+
+// footer 
+
+.footer {
+    background-color: $bg-color;
+    color: white;
+    padding: 1rem;
+
+    &__intro {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2rem;
+        
+
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
