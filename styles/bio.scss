@@ -140,6 +140,7 @@ img {
     padding-bottom: 2rem;
     width: 100%;
     margin: 0 auto;
+    aspect-ratio: 16/9;
 
     @include tablet {
         height: 50vh;
