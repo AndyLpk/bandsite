@@ -319,22 +319,7 @@ img {
 }
 
 .img {
-  padding: 1rem;
   background-color: rgba(192, 192, 192, 0.1);
-}
-@media screen and (min-width: 768px) {
-  .img {
-    padding: 2rem;
-    padding-right: 0.5rem;
-    padding-bottom: 1rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .img {
-    padding: 8rem;
-    padding-right: 4rem;
-    padding-bottom: 1rem;
-  }
 }
 .img__title {
   font-size: 1.5rem;
@@ -342,37 +327,55 @@ img {
   margin: 0;
   padding-top: 1rem;
   color: #323232;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .img__title {
     font-size: 2.25rem;
-    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .img__title {
     font-size: 2.5rem;
     padding-bottom: 3rem;
+    padding-left: 7.5rem;
   }
+}
+.img__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 1rem;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .img__grid {
-    display: flex;
-    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .img__grid {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+    padding-bottom: 3rem;
   }
 }
 .img__list {
-  padding-top: 0.8rem;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 @media screen and (min-width: 768px) {
   .img__list {
     max-width: 30%;
     max-height: 50%;
-    padding: 0;
-    margin-left: 0;
-    margin-bottom: 1.5rem;
-    margin-right: 1.5rem;
   }
 }
 
@@ -489,13 +492,13 @@ img {
   .footer__logo {
     padding: 0;
     position: relative;
-    bottom: 11.75rem;
+    bottom: 12rem;
     left: 36.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__logo {
-    bottom: 14.75rem;
+    bottom: 15rem;
     left: 56.75rem;
   }
 }
