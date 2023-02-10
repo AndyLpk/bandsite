@@ -57,6 +57,10 @@ img {
         
     }
 
+    @include desktop{
+        padding-left: 8rem;
+    }
+
 }
 
 // sub-nav bar
@@ -88,6 +92,11 @@ img {
             padding-top: 1rem;
 
         }
+
+        @include desktop {
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
         
 
         &--current {
@@ -100,7 +109,7 @@ img {
     }
 
     &__link {
-        color: silver;
+        color: #E1E1E1;
         padding-top: .5rem;
         padding-bottom: .5rem;
         text-decoration: none;
@@ -136,6 +145,9 @@ img {
         height: 50vh;
     }
     
+    @include desktop {
+        height: 80vh;
+    }
     
 
     &__title {
@@ -148,7 +160,13 @@ img {
 
         @include tablet {
             font-size: 3.75rem;
+            line-height: 2.75rem;
             padding-left: 2rem;
+        }
+
+        @include desktop {
+            font-size: 4rem;
+            padding-left: 8rem;
         }
     }
 }
@@ -167,6 +185,11 @@ img {
         padding-right: 2rem;
     }
 
+    @include desktop {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
     &__title {
         font-size: 1.5rem;        
         padding-top: 1.5rem;
@@ -178,6 +201,10 @@ img {
             padding-top: 3rem;
             padding-bottom: 2.25rem;
         }
+
+        @include desktop {
+            font-size: 2.5rem;
+        }
         
     }
 
@@ -186,12 +213,20 @@ img {
         width: 100%;
         height: 20vh;
         margin: 0 auto;
-        
+        object-fit: cover;
 
         @include tablet {
             height: 40vh;
             padding-left: 4rem;
             padding-right: 4rem;
+        }
+
+        @include desktop {
+            height: 60vh;
+            padding-left: 6rem;
+            padding-right: 6rem;
+           
+
         }
         
     }
@@ -207,14 +242,29 @@ img {
             padding-right: 2rem;
             font-size: 1rem;
 
+
             &--description {
                 font-size: 1.40rem;
                 line-height: 2rem;
+
+                @include desktop {
+                    font-size: 1.5rem;
+                    padding-top: 1rem;
+                }
     
             }
         }
 
-        
+        @include desktop {
+            padding-left: 3rem;
+            padding-right: 3rem;
+            width: 52rem;
+            
+            &--description2 {
+                font-size: 1.15rem;
+            }
+
+        }
 
     }
 }
@@ -230,6 +280,11 @@ img {
         padding-right: 6rem;        
     }
 
+    @include desktop {
+        padding-left: 14rem;
+        padding-right: 14rem; 
+    }
+
 
     &__title {
         margin-top: 0;
@@ -240,6 +295,7 @@ img {
         @include tablet {
             font-size: 1.5rem;
             margin-bottom: 0;
+            padding-top: 1rem;
         }
     }
 
@@ -262,6 +318,10 @@ img {
             font-size: 0.875rem;
             line-height: 1.5rem;         
         }
+
+        @include desktop {
+            font-size: 0.975rem;
+        }
     }
 }
 
@@ -279,6 +339,12 @@ img {
         padding-bottom: 1rem;
     }
     
+    @include desktop {
+        padding: 8rem;
+        padding-right: 4rem;
+        padding-bottom: 1rem;
+    }
+    
 
 
     &__title {
@@ -291,6 +357,11 @@ img {
         @include tablet {
             font-size: 2.25rem;
             padding-bottom: 1rem;
+        }
+
+        @include desktop {
+            font-size: 2.5rem;
+            padding-bottom: 3rem;
         }
     }
 
@@ -312,6 +383,7 @@ img {
            padding: 0;            
            margin-left: 0;
            margin-bottom: 1.5rem;
+           margin-right: 1.5rem;
         }
     }
 }
@@ -329,9 +401,13 @@ img {
         padding-top: 3rem;
     }
 
+    @include desktop {
+        padding-left: 8rem;
+        padding-top: 4rem;
+    }
+
     &__intro {
-        font-size: 1.5rem;
-        line-height: 2rem;   
+        font-size: 1.5rem; 
         font-weight: 600;
 
         &--title {
@@ -349,8 +425,9 @@ img {
             gap: 2rem;
         }
 
-        
-        
+        @include desktop {
+            gap: 4rem;
+        } 
     }
 
     &__icons {
@@ -368,13 +445,18 @@ img {
             flex-direction: row;
             justify-content: space-between;
             width: 95%;
-            
+        }
+
+        @include desktop {
+            width: 70%;
         }
 
         &--list {
             padding-top: 2rem;
 
-            
+            @include desktop {
+                padding-top: 3rem;
+            }
         }
 
         &--items {
@@ -387,6 +469,10 @@ img {
                 font-size: 0.875rem;
                 line-height: 1.25rem;
             }
+
+            @include desktop {
+                font-size: 1rem;
+            }
         }
 
         &--bold {
@@ -396,10 +482,18 @@ img {
 
         &--info {
             padding-top: 1rem;
+
+            @include desktop {
+                padding-top: 2rem;
+            }
         }
 
         &--email {
             padding-top: 1rem;
+
+            @include desktop {
+                padding-top: 2rem;
+            }
         }       
 
         
@@ -414,6 +508,11 @@ img {
             bottom: 11.75rem;
             left: 36.5rem;
         }
+
+        @include desktop {
+            bottom: 14.75rem;
+            left: 56.75rem;
+        }
     }
 
     &__description {
@@ -423,21 +522,13 @@ img {
         @include tablet {
             font-size: 0.85rem;
         }
+
+        @include desktop {
+            padding-top: 2rem;
+            font-size: 1rem;
+            padding-bottom: 1rem;
+        }
     }
-
-   
-
-    
-
-
-
-
-
-
-
-
-
-
 }
 
 
