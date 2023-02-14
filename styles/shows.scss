@@ -1,0 +1,316 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/fonts' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: AvenirNext LT Pro;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    
+}
+
+// site-header
+
+.site-header{
+    background-color: $bg-color;
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        @include tablet {
+            flex-direction: row;
+            gap: 4rem;
+        }
+    }
+}
+
+// logo
+
+.logo {
+    padding-top: 1rem;
+    display: inline-block;
+    
+
+    &__img {
+        max-width: 7.5rem;
+        max-height: 1.25rem;        
+    }
+    
+
+    @include tablet {
+        padding: 0;
+        padding-left: 2rem;
+        
+    }
+
+    @include desktop{
+        padding-left: 8rem;
+    }
+
+}
+
+// sub-nav bar
+
+.primary-nav {
+    
+    width: 100%;
+
+    &__list {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        list-style: none;
+        font-size: 0.875rem;      
+
+        @include tablet {
+            gap: 2rem;            
+        }
+    }
+
+    &__item {
+        width: 50%;
+        text-align: center;
+
+        @include tablet {
+            width: 5rem;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+
+        }
+
+        @include desktop {
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
+        
+
+        &--current {
+            border-bottom: .15rem solid white; 
+            
+            @include tablet {
+                width: fit-content;
+            }           
+        }
+    }
+
+    &__link {
+        color: #E1E1E1;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        text-decoration: none;
+        display: inline-block;     
+        
+        &--current {
+            color: white;
+            font-weight: 600;            
+        }
+    } 
+}
+
+
+// banner
+
+.banner {
+    
+    background-image: url(../assets/images/hero-bio.jpg); 
+    background-color: rgba(0, 0, 0, 0.473);
+    background-blend-mode: darken ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start ;
+    padding-bottom: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+
+    @include tablet {
+        height: 50vh;
+    }
+    
+    @include desktop {
+        height: 80vh;
+    }
+    
+
+    &__title {
+        color: white;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        padding-left: 1rem;
+        margin-top: 5rem;
+
+        @include tablet {
+            font-size: 3.75rem;
+            line-height: 2.75rem;
+            padding-left: 2rem;
+        }
+
+        @include desktop {
+            font-size: 4rem;
+            padding-left: 8rem;
+        }
+    }
+}
+
+
+// footer 
+
+.footer {
+    background-color: $bg-color;
+    color: white;
+    padding: 1rem;
+
+    @include tablet {
+        padding: 2rem;
+        padding-top: 3rem;
+    }
+
+    @include desktop {
+        padding-left: 8rem;
+        padding-top: 4rem;
+    }
+
+    &__intro {
+        font-size: 1.5rem; 
+        font-weight: 600;
+
+        &--title {
+            padding-bottom: 1rem;
+
+            @include tablet {
+                padding: 0;
+            }
+        }
+
+        @include tablet {
+            font-size: 2.25rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        @include desktop {
+            gap: 4rem;
+        } 
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 8rem;
+        height: 1.5rem;
+    }
+
+    &__outro{
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 95%;
+        }
+
+        @include desktop {
+            width: 70%;
+        }
+
+        &--list {
+            padding-top: 2rem;
+
+            @include desktop {
+                padding-top: 3rem;
+            }
+        }
+
+        &--items {
+            font-size: 0.8125rem;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+
+            @include tablet {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+
+            @include desktop {
+                font-size: 1rem;
+            }
+        }
+
+        &--bold {
+            font-weight: 600;
+            
+        }
+
+        &--info {
+            padding-top: 1rem;
+
+            @include desktop {
+                padding-top: 2rem;
+            }
+        }
+
+        &--email {
+            padding-top: 1rem;
+
+            @include desktop {
+                padding-top: 2rem;
+            }
+        }       
+
+        
+    }
+
+    &__logo {
+        padding-top: 3.5rem;
+
+        @include tablet {
+            padding: 0;
+            position: relative;
+            bottom: 12rem;
+            left: 36.5rem;
+        }
+
+        @include desktop {
+            bottom: 15rem;
+            left: 56.75rem;
+        }
+    }
+
+    &__description {
+        font-size: .7rem;
+        padding-top: 1rem;
+
+        @include tablet {
+            font-size: 0.85rem;
+        }
+
+        @include desktop {
+            padding-top: 2rem;
+            font-size: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+}

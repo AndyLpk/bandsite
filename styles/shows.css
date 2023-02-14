@@ -1,0 +1,314 @@
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff"), url("../assets/fonts/AvenirNextLTPro-Demi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"), url("../assets/fonts/AvenirNextLTPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"), url("../assets/fonts/AvenirNextLTPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: AvenirNext LT Pro;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-header {
+  background-color: #323232;
+  width: 100%;
+}
+.site-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .site-header__wrapper {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.logo {
+  padding-top: 1rem;
+  display: inline-block;
+}
+.logo__img {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    padding: 0;
+    padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo {
+    padding-left: 8rem;
+  }
+}
+
+.primary-nav {
+  width: 100%;
+}
+.primary-nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  .primary-nav__list {
+    gap: 2rem;
+  }
+}
+.primary-nav__item {
+  width: 50%;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .primary-nav__item {
+    width: 5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .primary-nav__item {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+}
+.primary-nav__item--current {
+  border-bottom: 0.15rem solid white;
+}
+@media screen and (min-width: 768px) {
+  .primary-nav__item--current {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.primary-nav__link {
+  color: #E1E1E1;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+}
+.primary-nav__link--current {
+  color: white;
+  font-weight: 600;
+}
+
+.banner {
+  background-image: url(../assets/images/hero-bio.jpg);
+  background-color: rgba(0, 0, 0, 0.473);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner {
+    height: 80vh;
+  }
+}
+.banner__title {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  margin-top: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .banner__title {
+    font-size: 3.75rem;
+    line-height: 2.75rem;
+    padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner__title {
+    font-size: 4rem;
+    padding-left: 8rem;
+  }
+}
+
+.footer {
+  background-color: #323232;
+  color: white;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2rem;
+    padding-top: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding-left: 8rem;
+    padding-top: 4rem;
+  }
+}
+.footer__intro {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.footer__intro--title {
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__intro--title {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__intro {
+    font-size: 2.25rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__intro {
+    gap: 4rem;
+  }
+}
+.footer__icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 8rem;
+  height: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__outro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__outro {
+    width: 70%;
+  }
+}
+.footer__outro--list {
+  padding-top: 2rem;
+}
+@media screen and (min-width: 1280px) {
+  .footer__outro--list {
+    padding-top: 3rem;
+  }
+}
+.footer__outro--items {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__outro--items {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__outro--items {
+    font-size: 1rem;
+  }
+}
+.footer__outro--bold {
+  font-weight: 600;
+}
+.footer__outro--info {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .footer__outro--info {
+    padding-top: 2rem;
+  }
+}
+.footer__outro--email {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .footer__outro--email {
+    padding-top: 2rem;
+  }
+}
+.footer__logo {
+  padding-top: 3.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    padding: 0;
+    position: relative;
+    bottom: 12rem;
+    left: 36.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo {
+    bottom: 15rem;
+    left: 56.75rem;
+  }
+}
+.footer__description {
+  font-size: 0.7rem;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__description {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__description {
+    padding-top: 2rem;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+}/*# sourceMappingURL=shows.css.map */
