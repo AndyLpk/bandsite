@@ -126,14 +126,15 @@ img {
 }
 
 .banner {
-  background-image: url(../assets/images/hero-bio.jpg);
+  background-image: url(../assets/images/hero-shows.jpg);
   background-color: rgba(0, 0, 0, 0.473);
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 25vh;
+  height: 35vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding-bottom: 2rem;
@@ -151,26 +152,99 @@ img {
     height: 80vh;
   }
 }
-.banner__title {
+.banner__header {
   color: white;
+  padding-left: 1rem;
+}
+.banner__header--desp2 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding-top: 1rem;
+}
+.banner__header--desp1 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
-  padding-left: 1rem;
-  margin-top: 5rem;
+  width: 70%;
 }
 @media screen and (min-width: 768px) {
-  .banner__title {
+  .banner__header--desp1 {
     font-size: 3.75rem;
     line-height: 2.75rem;
     padding-left: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .banner__title {
+  .banner__header--desp1 {
     font-size: 4rem;
     padding-left: 8rem;
   }
+}
+
+.main__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 0.75rem;
+}
+.main__item {
+  padding: 0;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+.main__item--list {
+  list-style: none;
+  border-bottom: 1px solid silver;
+  width: 100%;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+.main__item--sub-title {
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: silver;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  margin-top: 0;
+}
+.main__item--date {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.main__item--venue {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.main__item--location {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.main__item--button {
+  background-color: #323232;
+  border: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  cursor: pointer;
+  color: white;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 .footer {
@@ -196,6 +270,7 @@ img {
 }
 .footer__intro--title {
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__intro--title {
