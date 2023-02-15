@@ -144,7 +144,7 @@ img {
     aspect-ratio: 16/9;
 
     @include tablet {
-        height: 50vh;
+        height: 61vh;
     }
     
     @include desktop {
@@ -163,6 +163,12 @@ img {
         font-size: 0.875rem;
         font-weight: 400;
         padding-top: 1rem;
+
+        @include tablet {
+            padding-left: 2rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
 
        }
 

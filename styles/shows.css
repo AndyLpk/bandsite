@@ -144,7 +144,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .banner {
-    height: 50vh;
+    height: 61vh;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -160,6 +160,13 @@ img {
   font-size: 0.875rem;
   font-weight: 400;
   padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .banner__header--desp2 {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 }
 .banner__header--desp1 {
   font-size: 1.5rem;
