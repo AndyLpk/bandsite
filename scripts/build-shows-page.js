@@ -56,10 +56,44 @@ const showDataMobile = [
 
 ];
 
+// const showDataTablet = [
+//     {
+//         title1: "date",
+//         title2: "venue",
+//         title3: "location",
+//     },
+// ];
 
 const showList = document.getElementById("main__item");
 console.log(showList)
 
+// function createShowTitle(showTitle) {
+
+//     const showLit = document.createElement("li");
+//     showLit.classList.add("main__item--list", "main__item--list--tablet");
+
+//     const showSubTitle1 = document.createElement("p");
+//     showSubTitle1.classList.add("main__item--subtitle");
+//     showSubTitle1.innerText = showTitle.title1;
+
+//     const showSubTitle2 = document.createElement("p");
+//     showSubTitle2.classList.add("main__item--subtitle");
+//     showSubTitle2.innerText = showTitle.title2;
+
+//     const showSubTitle3 = document.createElement("p");
+//     showSubTitle3.classList.add("main__item--subtitle");
+//     showSubTitle3.innerText = showTitle.title3;
+
+//     showLit.appendChild(showSubTitle1);
+//     showLit.appendChild(showSubTitle2);
+//     showLit.appendChild(showSubTitle3);
+//     showList.appendChild(showLit);
+
+// }
+
+// for (let y = 0; y <showDataTablet.length; y++) {
+//     createShowTitle(showDataTablet[y]);
+// }
 
 function createShow(show) {
     const showLi = document.createElement("li");
@@ -112,44 +146,6 @@ for (let i = 0; i < showDataMobile.length; i++) {
     createShow(showDataMobile[i]);
 }
 
-
-
-
-
-
-// const showData = [
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Tue Sept 21 2021",
-//         venue: "Pier 3 East",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Fri Oct 15 2021",
-//         venue: "View Lounge",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Sat Nov 06 2021",
-//         venue: "Hyatt Agency",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Fri Nov 26 2021",
-//         venue: "Moscow Center",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Wed Dec 15 2021",
-//         venue: "Press Club",
-//         location: "San Francisco, CA",
-//     },
-
-// ];
 
 
 

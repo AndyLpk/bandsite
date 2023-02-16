@@ -380,6 +380,15 @@ img {
   }
 }
 
+.comment {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.comment__section {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
 .footer {
   background-color: #323232;
   color: white;
