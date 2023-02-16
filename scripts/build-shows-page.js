@@ -56,44 +56,9 @@ const showDataMobile = [
 
 ];
 
-// const showDataTablet = [
-//     {
-//         title1: "date",
-//         title2: "venue",
-//         title3: "location",
-//     },
-// ];
-
 const showList = document.getElementById("main__item");
 console.log(showList)
 
-// function createShowTitle(showTitle) {
-
-//     const showLit = document.createElement("li");
-//     showLit.classList.add("main__item--list", "main__item--list--tablet");
-
-//     const showSubTitle1 = document.createElement("p");
-//     showSubTitle1.classList.add("main__item--subtitle");
-//     showSubTitle1.innerText = showTitle.title1;
-
-//     const showSubTitle2 = document.createElement("p");
-//     showSubTitle2.classList.add("main__item--subtitle");
-//     showSubTitle2.innerText = showTitle.title2;
-
-//     const showSubTitle3 = document.createElement("p");
-//     showSubTitle3.classList.add("main__item--subtitle");
-//     showSubTitle3.innerText = showTitle.title3;
-
-//     showLit.appendChild(showSubTitle1);
-//     showLit.appendChild(showSubTitle2);
-//     showLit.appendChild(showSubTitle3);
-//     showList.appendChild(showLit);
-
-// }
-
-// for (let y = 0; y <showDataTablet.length; y++) {
-//     createShowTitle(showDataTablet[y]);
-// }
 
 function createShow(show) {
     const showLi = document.createElement("li");
