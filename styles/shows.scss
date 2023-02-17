@@ -153,7 +153,6 @@ img {
     @include desktop {
         height: 78vh;
         flex-wrap: nowrap;
-        // align-items: baseline;
         
     }
 
@@ -163,11 +162,7 @@ img {
         color: white;
         padding-left: 1rem;
 
-        @include desktop {
-            
-        }
 
-        
 
        &--desp2{
         font-size: 0.875rem;
@@ -283,11 +278,6 @@ img {
             flex-direction: column;
         }
 
-        @include desktop {
-            
-        }
-        
-
         
         &--list {
             list-style: none;
@@ -303,9 +293,19 @@ img {
                 padding-top: 1rem;
                 align-items: center;
             }
+            
+        }
 
-            @include desktop {
-                
+        &--hover:hover {
+            
+            @include tablet {
+                background-color: #fafafa;
+            }
+        }
+
+        &--hover.active {
+            @include tablet {
+                background-color: #e1e1e1;
             }
         }
         
@@ -422,6 +422,8 @@ img {
             }
             
         }
+
+        
 
     }
 }
@@ -569,3 +571,6 @@ img {
         }
     }
 }
+
+
+

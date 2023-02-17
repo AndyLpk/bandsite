@@ -21,8 +21,8 @@ const commentList = document.getElementById("comment__section");
 
 for (let i = 0; i < commentData.length; i++){
 
-    // const commentItem = document.createElement('div');
-    // commentItem.classList.add('comment__section--item');
+    const commentItem = document.createElement('div');
+    commentItem.classList.add('comment__section--item');
 
     const commentName = document.createElement('p');
     commentName.innerText = commentData[i].name;
@@ -37,10 +37,10 @@ for (let i = 0; i < commentData.length; i++){
     commentContent.classList.add('comment__section--content');
 
 
-    commentList.appendChild(commentName);
-    commentList.appendChild(commentDate);
-    commentList.appendChild(commentContent);
+    commentItem.appendChild(commentName);
+    commentItem.appendChild(commentDate);
+    commentItem.appendChild(commentContent);
 
-    // commentItem.appendChild(commentList);
+    commentList.appendChild(commentItem);
 
 }

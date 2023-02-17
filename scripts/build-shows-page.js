@@ -62,7 +62,7 @@ console.log(showList)
 
 function createShow(show) {
     const showLi = document.createElement("li");
-    showLi.classList.add("main__item--list");
+    showLi.classList.add("main__item--list", "main__item--hover");
 
     const showTitle1 = document.createElement("p");
     showTitle1.classList.add("main__item--sub-title");
@@ -102,7 +102,9 @@ function createShow(show) {
 
     console.log(showLi)
 
-    showList.appendChild(showLi);
+  
+    showList.appendChild(showLi)
+
 
 
 }
@@ -111,6 +113,16 @@ for (let i = 0; i < showDataMobile.length; i++) {
     createShow(showDataMobile[i]);
 }
 
+const items = document.querySelectorAll(".main__item--hover");
 
+items.forEach(function(item) {
+    item.addEventListener("click", function() {
+        this.classList.add("active");
 
-
+        items.forEach(function(otherItem) {
+            if (otherItem !== item) {
+                otherItem.classList.remove("active");
+            }
+        });
+    });
+});
