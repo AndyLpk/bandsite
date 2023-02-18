@@ -64,12 +64,31 @@
 
     <section class="comment">
         <div class="comment__title">Join the Conversation</div>
-        <form action=""></form>
-
-        <div id="comment__section" class="comment__section">
-
+        <div class="comment-box">
+            <form class="comment-box" >
+        <img  class="comment-box__img" src="./assets/images/Mohan-muruge.jpg" alt="avatar img">
+        <label  class="comment-box__name" for="name">name</label>
+        <input type="text" id="name" 
+                name="name"  
+                placeholder="Enter your name"
+                class="comment-box__input"/>
+      
+        <label class="comment-box__content" for="comment">comment</label>
+        <input type="text" id="comment-box" 
+        name="commentBox"
+        placeholder="add a new comment" />
+      
+        <button type="submit">submit</button>
+      
+      </form>
+      
         </div>
-    </section>
+        
+      
+        <ul id="comment__section" class="comment__section">
+      
+        </ul>
+      </section>
 
     <footer class="footer">
         <div class="footer__intro">

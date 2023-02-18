@@ -395,6 +395,14 @@ img {
 .comment {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 1rem;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #323232;
+        padding-bottom: 1rem;
+    }
 
     &__section {
         font-size: 0.875rem;
@@ -402,10 +410,105 @@ img {
        
     }
 
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        border-bottom: 1px solid silver;
 
+    }
 
+    &__item {
+        font-size: 0.8125rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 85%;
+    }
+
+    &__name {
+        
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__date {
+        color: #E1E1E1;
+        margin: 0;
+        
+    }
+
+    &__content {
+        font-weight: 600;
+        line-height: 18px;
+    }
+
+    &__img {
+        width: 2.25rem;
+        height: 2.25rem;
+        background-color: #e1e1e1;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+}
+.comment-box {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__name {
+        color: silver;
+        display: flex;
+        padding-bottom: 0.25rem;
+        text-transform: uppercase;
+        font-size: 0.65rem;
+        font-weight: 600;
+        height: 25%;
+        flex-direction: column;
+        
+
+        
+    }
+
+    &__input {
+        padding: 0.5rem;
+        text-align: left;
+        width: 85%;
+        background-color: #e1e1e150;
+        border: 1px solid #e1e1e1;
+        border-color: #E1E1E1;
+        border-radius: 0.25rem;
+        -webkit-border-radius: 0.25rem;
+        -moz-border-radius: 0.25rem;
+        -ms-border-radius: 0.25rem;
+        -o-border-radius: 0.25rem;
+    }
+
+    &__input::placeholder {
+        color: #323232;
+        
+    }
+
+    &__img {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        object-fit: cover;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
 
 }
+
+
+
+
+
 
 
 
@@ -415,6 +518,8 @@ img {
     background-color: $bg-color;
     color: white;
     padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 1rem;
 
     @include tablet {
         padding: 2rem;
@@ -550,5 +655,3 @@ img {
         }
     }
 }
-
-
