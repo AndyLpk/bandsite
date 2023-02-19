@@ -133,7 +133,6 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;    
-    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: flex-start ;
@@ -141,14 +140,6 @@ img {
     width: 100%;
     margin: 0 auto;
     aspect-ratio: 16/9;
-
-    @include tablet {
-        height: 50vh;
-    }
-    
-    @include desktop {
-        height: 80vh;
-    }
     
 
     &__title {
@@ -397,34 +388,60 @@ img {
     padding-right: 1rem;
     padding-top: 1rem;
 
+    @include tablet {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 3rem;
+    }
+
+    @include desktop {
+        padding-left: 7.5rem;
+    }
+
+    
     &__title {
         font-size: 1.5rem;
         font-weight: 600;
         color: #323232;
         padding-bottom: 1rem;
+
+        @include tablet {
+            font-size: 2.25rem;
+            padding-bottom: 2rem;
+        }
     }
 
     &__section {
         font-size: 0.875rem;
         font-weight: 400;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+
+        &--item {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-bottom: 1px solid silver;
+            gap: 1.375rem;
+
+            @include tablet {
+                width: 80%;
+                margin-left: 4rem;    
+                padding-top: 2rem;
+                padding-bottom: 1.5rem;  
+                gap: 0.5rem;                
+            }
+
+            @include desktop {
+                width: 44%;
+                margin-left: 17rem;
+                gap: 0.75rem;
+                padding-bottom: 0.5rem;
+            }
+        }
        
-    }
-
-    &__box {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 1rem;
-        border-bottom: 1px solid silver;
-
-    }
-
-    &__item {
-        font-size: 0.8125rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 85%;
-    }
+    }    
 
     &__name {
         
@@ -433,84 +450,189 @@ img {
     }
 
     &__date {
-        color: #E1E1E1;
+        color: silver;
         margin: 0;
         
     }
 
     &__content {
         font-weight: 600;
-        line-height: 18px;
+        line-height: 1.125rem;
+        width: 100% auto;
+
+        @include desktop {
+            line-height: 1.375rem ;
+        }
+    }
+
+    &__item {
+        font-size: 0.8125rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    
+
+}
+
+
+
+.comment-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid silver;
+    padding-bottom: 1rem;
+    gap: 1.375rem;
+    
+    @include tablet {
+        width: 80%;
+        margin-left: 4rem;    
+        padding-bottom: 1.5rem;  
+        gap: 0.5rem;
+        
+    }
+
+    @include desktop {
+        width: 44%;
+        margin-left: 17rem;
+        gap: 0.75rem;
+    }
+
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-top: 1.25rem;
+        width: 2.75rem;
+
+        @include tablet {
+            width: 3.5rem;
+        }
+
+        &--list {
+            padding-top: 0;
+        }
+        
     }
 
     &__img {
         width: 2.25rem;
         height: 2.25rem;
-        background-color: #e1e1e1;
         border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
+        max-width: 100%;
+        object-fit: cover;
+        background-color: #e1e1e1;
+
+        @include tablet {
+            height: 3rem;
+            width: 3rem;
+            
+        }
     }
-}
-.comment-box {
 
-    display: flex;
-    flex-wrap: wrap;
-
-    &__name {
-        color: silver;
+    &__form-wrapper {
+        width: 100%;
         display: flex;
-        padding-bottom: 0.25rem;
-        text-transform: uppercase;
-        font-size: 0.65rem;
-        font-weight: 600;
-        height: 25%;
         flex-direction: column;
-        
 
-        
+        @include tablet {
+            
+        }
+    }
+
+    &__label {
+        font-size: 0.625rem;
+        font-weight: 600;
+        color: silver;
+        text-transform: uppercase;
+        padding-bottom: 0.25rem;
+
+        @include tablet {
+            font-size: 0.825rem;
+        }
     }
 
     &__input {
-        padding: 0.5rem;
-        text-align: left;
-        width: 85%;
-        background-color: #e1e1e150;
-        border: 1px solid #e1e1e1;
-        border-color: #E1E1E1;
+        padding: 0.65rem;
+        border: 1.5px solid rgba(192, 192, 192, 0.5);
         border-radius: 0.25rem;
+        font-size: 0.725rem;
+        font-weight: 500;
+        background-color: #fafafa;
         -webkit-border-radius: 0.25rem;
         -moz-border-radius: 0.25rem;
         -ms-border-radius: 0.25rem;
         -o-border-radius: 0.25rem;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            padding: 0.85rem;
+            font-size: 0.85rem;
+        }
+
+        &--comment {
+            padding: 0.65rem;
+            padding-bottom: 4rem;
+            border: 1.5px solid rgba(192, 192, 192, 0.5);
+            border-radius: 0.25rem;
+            font-size: 0.725rem;
+            font-weight: 500;
+            background-color: #fafafa;
+            margin-bottom: 1rem;
+
+            @include tablet {
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            
+            }
+
+        }
+
+        &--comment::placeholder {
+            color: #323232;
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__input::placeholder {
         color: #323232;
-        
     }
 
-    &__img {
-        width: 2.25rem;
-        height: 2.25rem;
-        border-radius: 50%;
-        object-fit: cover;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-}
+    &__commentButton {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__button {
+        padding: 10px 16px;
+        background-color: #323232;
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+  
+        &:hover {
+          background-color: #000;
+        }
+
+        @include tablet {
+            max-width: 150px;
+        }
+      }
+
+    
 
 }
-
-
-
-
-
-
-
 
 // footer 
 
@@ -524,6 +646,7 @@ img {
     @include tablet {
         padding: 2rem;
         padding-top: 3rem;
+        margin-top: 2rem;
     }
 
     @include desktop {

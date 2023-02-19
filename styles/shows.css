@@ -213,6 +213,7 @@ img {
     height: 8rem;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .main {
     display: flex;
@@ -372,6 +373,7 @@ img {
     font-weight: 400;
     text-transform: uppercase;
     padding-top: 2rem;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 1280px) {
