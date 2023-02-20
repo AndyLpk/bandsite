@@ -1,4 +1,4 @@
-const commentForm = document.querySelector(".comment-box");
+const commentForm = document.querySelector(".comment__form");
 const commentList = document.querySelector(".comment__section");
 const now = Date.now();
 const formattedDate = new Date(now).toLocaleDateString();
@@ -42,20 +42,20 @@ function renderCommentEntries() {
 
   for (let i = 0; i < commentData.length; i++) {
     const commentLi = document.createElement("li");
-    commentLi.classList.add("comment__section--item");
+    commentLi.classList.add("comment__item", "comment__item--list");
 
     const commentBox = document.createElement("div");
-    commentBox.classList.add("comment-box__header", "comment-box__header--list");
+    commentBox.classList.add("comment__header", "comment__header--list");
 
     const commentImg = document.createElement("img");
-    commentImg.classList.add("comment-box__img");
+    commentImg.classList.add("comment__img");
 
     const commentForm = document.createElement("div");
-    commentForm.classList.add("comment-box__form-wrapper");
+    commentForm.classList.add("comment__wrapper");
     
 
     const commentItem = document.createElement("div");
-    commentItem.classList.add("comment__item");
+    commentItem.classList.add("comment__top");
 
     const commentName = document.createElement("p");
     commentName.innerText = commentData[i].name;

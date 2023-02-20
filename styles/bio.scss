@@ -20,7 +20,7 @@ img {
 
 // site-header
 
-.site-header{
+.header{
     background-color: $bg-color;
     width: 100%;
 
@@ -36,38 +36,10 @@ img {
             gap: 4rem;
         }
     }
-}
 
-// logo
-
-.logo {
-    padding-top: 1rem;
-    display: inline-block;
-    
-
-    &__img {
-        max-width: 7.5rem;
-        max-height: 1.25rem;        
+    &__nav {
+        width: 100%;
     }
-    
-
-    @include tablet {
-        padding: 0;
-        padding-left: 2rem;
-        
-    }
-
-    @include desktop{
-        padding-left: 8rem;
-    }
-
-}
-
-// sub-nav bar
-
-.primary-nav {
-    
-    width: 100%;
 
     &__list {
         display: flex;
@@ -120,6 +92,33 @@ img {
             font-weight: 600;            
         }
     } 
+   
+    
+}
+
+// logo
+
+.logo {
+    padding-top: 1rem;
+    display: inline-block;
+    
+
+    &__img {
+        max-width: 7.5rem;
+        max-height: 1.25rem;        
+    }
+    
+
+    @include tablet {
+        padding: 0;
+        padding-left: 2rem;
+        
+    }
+
+    @include desktop{
+        padding-left: 8rem;
+    }
+
 }
 
 
@@ -223,7 +222,7 @@ img {
         
     }
 
-    &__sub {
+    &__list {
         font-size: 0.875rem ;
         font-weight: 600;
         line-height: 1.375rem;
@@ -235,7 +234,7 @@ img {
             font-size: 1rem;
 
 
-            &--description {
+            &--top {
                 font-size: 1.40rem;
                 line-height: 2rem;
 
@@ -252,7 +251,7 @@ img {
             padding-right: 3rem;
             width: 52rem;
             
-            &--description2 {
+            &--bottom {
                 font-size: 1.15rem;
             }
 
@@ -291,7 +290,7 @@ img {
         }
     }
 
-    &__description--box {
+    &__container {
         @include tablet {
             display: flex;
             flex-direction: row;
@@ -411,14 +410,170 @@ img {
         }
     }
 
+    &__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid silver;
+        padding-bottom: 1rem;
+        gap: 1.375rem;
+        
+        @include tablet {
+            width: 80%;
+            margin-left: 4rem;    
+            padding-bottom: 1.5rem;  
+            gap: 0.5rem;
+            
+        }
+    
+        @include desktop {
+            width: 44%;
+            margin-left: 17rem;
+            gap: 0.75rem;
+        }
+    
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-top: 1.25rem;
+        width: 2.75rem;
+
+        @include tablet {
+            width: 3.5rem;
+        }
+
+        &--list {
+            padding-top: 0;
+        }
+        
+    }
+
+    &__img {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: left;
+        background-color: #e1e1e1;
+
+        @include tablet {
+            height: 3rem;
+            width: 3rem;
+            
+        }
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+    }
+
+    &__label {
+        font-size: 0.625rem;
+        font-weight: 600;
+        color: silver;
+        text-transform: uppercase;
+        padding-bottom: 0.25rem;
+
+        @include tablet {
+            font-size: 0.825rem;
+        }
+    }
+
+    &__input {
+        padding: 0.65rem;
+        border: 1.5px solid rgba(192, 192, 192, 0.5);
+        border-radius: 0.25rem;
+        font-size: 0.725rem;
+        font-weight: 500;
+        background-color: #fafafa;
+        -webkit-border-radius: 0.25rem;
+        -moz-border-radius: 0.25rem;
+        -ms-border-radius: 0.25rem;
+        -o-border-radius: 0.25rem;
+        margin-bottom: 1.5rem;
+       
+
+        @include tablet {
+            padding: 0.85rem;
+            font-size: 0.85rem;
+        }
+
+        &--comment {
+            padding: 0.65rem;
+            padding-bottom: 4rem;
+            border: 1.5px solid rgba(192, 192, 192, 0.5);
+            border-radius: 0.25rem;
+            font-size: 0.725rem;
+            font-weight: 500;
+            background-color: #fafafa;
+            margin-bottom: 1rem;
+            
+
+            @include tablet {
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            
+            }
+
+        }
+
+        &--comment::placeholder {
+            color: #323232;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__input::placeholder {
+        color: #323232;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__button {
+        padding: 10px 16px;
+        background-color: #323232;
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+  
+        &:hover {
+          background-color: #000;
+        }
+
+        @include tablet {
+            max-width: 150px;
+        }
+    }
+
     &__section {
+        padding-left: 0;
+    }
+
+    &__item {
         font-size: 0.875rem;
         font-weight: 400;
         list-style: none;
-        padding-left: 0;
         margin: 0;
 
-        &--item {
+        &--list {
             display: flex;
             justify-content: space-between;
             padding-top: 1rem;
@@ -465,174 +620,15 @@ img {
         }
     }
 
-    &__item {
+    &__top {
         font-size: 0.8125rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
     }
-
-    
-
 }
 
-
-
-.comment-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    border-bottom: 1px solid silver;
-    padding-bottom: 1rem;
-    gap: 1.375rem;
-    
-    @include tablet {
-        width: 80%;
-        margin-left: 4rem;    
-        padding-bottom: 1.5rem;  
-        gap: 0.5rem;
-        
-    }
-
-    @include desktop {
-        width: 44%;
-        margin-left: 17rem;
-        gap: 0.75rem;
-    }
-
-
-    &__header {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding-top: 1.25rem;
-        width: 2.75rem;
-
-        @include tablet {
-            width: 3.5rem;
-        }
-
-        &--list {
-            padding-top: 0;
-        }
-        
-    }
-
-    &__img {
-        width: 2.25rem;
-        height: 2.25rem;
-        border-radius: 50%;
-        max-width: 100%;
-        object-fit: cover;
-        background-color: #e1e1e1;
-
-        @include tablet {
-            height: 3rem;
-            width: 3rem;
-            
-        }
-    }
-
-    &__form-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        @include tablet {
-            
-        }
-    }
-
-    &__label {
-        font-size: 0.625rem;
-        font-weight: 600;
-        color: silver;
-        text-transform: uppercase;
-        padding-bottom: 0.25rem;
-
-        @include tablet {
-            font-size: 0.825rem;
-        }
-    }
-
-    &__input {
-        padding: 0.65rem;
-        border: 1.5px solid rgba(192, 192, 192, 0.5);
-        border-radius: 0.25rem;
-        font-size: 0.725rem;
-        font-weight: 500;
-        background-color: #fafafa;
-        -webkit-border-radius: 0.25rem;
-        -moz-border-radius: 0.25rem;
-        -ms-border-radius: 0.25rem;
-        -o-border-radius: 0.25rem;
-        margin-bottom: 1.5rem;
-
-        @include tablet {
-            padding: 0.85rem;
-            font-size: 0.85rem;
-        }
-
-        &--comment {
-            padding: 0.65rem;
-            padding-bottom: 4rem;
-            border: 1.5px solid rgba(192, 192, 192, 0.5);
-            border-radius: 0.25rem;
-            font-size: 0.725rem;
-            font-weight: 500;
-            background-color: #fafafa;
-            margin-bottom: 1rem;
-
-            @include tablet {
-            font-size: 0.85rem;
-            margin-bottom: 1.5rem;
-            
-            }
-
-        }
-
-        &--comment::placeholder {
-            color: #323232;
-            width: 100%;
-            height: auto;
-        }
-    }
-
-    &__input::placeholder {
-        color: #323232;
-    }
-
-    &__commentButton {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    &__button {
-        padding: 10px 16px;
-        background-color: #323232;
-        color: #fff;
-        font-size: 1rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100%;
-  
-        &:hover {
-          background-color: #000;
-        }
-
-        @include tablet {
-            max-width: 150px;
-        }
-      }
-
-    
-
-}
 
 // footer 
 
@@ -658,14 +654,6 @@ img {
         font-size: 1.5rem; 
         font-weight: 600;
 
-        &--title {
-            padding-bottom: 1rem;
-
-            @include tablet {
-                padding: 0;
-            }
-        }
-
         @include tablet {
             font-size: 2.25rem;
             display: flex;
@@ -678,11 +666,25 @@ img {
         } 
     }
 
+    &__title {
+        padding-bottom: 1rem;
+
+        @include tablet {
+            padding: 0;
+        }
+    }
+
     &__icons {
         display: flex;
         justify-content: space-between;
         gap: 1rem;
         width: 8rem;
+        
+    }
+
+
+    &__img {
+        
         height: 1.5rem;
     }
 
@@ -699,28 +701,30 @@ img {
             width: 70%;
         }
 
-        &--list {
-            padding-top: 2rem;
+    }
+    
 
-            @include desktop {
+    &__list {
+        padding-top: 2rem;
+
+        @include desktop {
                 padding-top: 3rem;
-            }
+        }
+    }
+
+    &__items {
+        font-size: 0.8125rem;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
         }
 
-        &--items {
-            font-size: 0.8125rem;
-            font-weight: 400;
-            margin: 0;
-            padding: 0;
-
-            @include tablet {
-                font-size: 0.875rem;
-                line-height: 1.25rem;
-            }
-
-            @include desktop {
-                font-size: 1rem;
-            }
+        @include desktop {
+            font-size: 1rem;
         }
 
         &--bold {
@@ -742,10 +746,8 @@ img {
             @include desktop {
                 padding-top: 2rem;
             }
-        }       
-
-        
-    }
+        }   
+    } 
 
     &__logo {
         padding-top: 3.5rem;
