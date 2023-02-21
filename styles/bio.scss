@@ -21,7 +21,7 @@ img {
 // site-header
 
 .header{
-    background-color: $bg-color;
+    background-color: $primary-color;
     width: 100%;
 
     &__wrapper {
@@ -60,14 +60,13 @@ img {
 
         @include tablet {
             width: 5rem;
-            padding-bottom: 1rem;
-            padding-top: 1rem;
+            @include padding (1rem,0,1rem,0);
 
         }
 
         @include desktop {
-            padding-bottom: 2rem;
-            padding-top: 2rem;
+            @include padding (1.5rem,0,1.5rem,0);
+
         }
         
 
@@ -81,9 +80,8 @@ img {
     }
 
     &__link {
-        color: #E1E1E1;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
+        color: $secondary-color;
+        @include padding (0.5rem,0,0.5rem,0);
         text-decoration: none;
         display: inline-block;     
         
@@ -110,13 +108,12 @@ img {
     
 
     @include tablet {
-        padding: 0;
-        padding-left: 2rem;
+        @include padding (0,0,0,2rem);
         
     }
 
     @include desktop{
-        padding-left: 8rem;
+        @include padding (0,0,0,8rem);
     }
 
 }
@@ -127,18 +124,12 @@ img {
 .banner {
     
     background-image: url(../assets/images/hero-bio.jpg); 
-    background-color: rgba(0, 0, 0, 0.473);
-    background-blend-mode: darken ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;    
+    @include background;  
     display: flex;
     align-items: center;
     justify-content: flex-start ;
     padding-bottom: 2rem;
-    width: 100%;
-    margin: 0 auto;
-    aspect-ratio: 16/9;
+    
     
 
     &__title {
@@ -167,30 +158,24 @@ img {
 .intro {
 
     font-weight: 600;
-    padding-right: 1rem;    
-    padding-left: 1rem;
-    padding-bottom: 1rem;
+    @include padding (0,1rem,1rem,1rem);
 
     @include tablet {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        @include padding (0,2rem,0,2rem);
     }
 
     @include desktop {
-        padding-left: 8rem;
-        padding-right: 8rem;
+        @include padding (0,8rem,0,8rem);
     }
 
     &__title {
         font-size: 1.5rem;        
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-        color: #323232;
+        @include padding (1.5rem,0rem,1rem,0rem);
+        color: $primary-color;
 
         @include tablet {
             font-size: 2.25rem;
-            padding-top: 3rem;
-            padding-bottom: 2.25rem;
+            @include padding (3rem,0rem,2.25rem,0rem);
         }
 
         @include desktop {
@@ -208,15 +193,12 @@ img {
 
         @include tablet {
             height: 40vh;
-            padding-left: 4rem;
-            padding-right: 4rem;
+            @include padding (0rem,4rem,0rem,4rem);
         }
 
         @include desktop {
             height: 60vh;
-            padding-left: 6rem;
-            padding-right: 6rem;
-           
+            @include padding (0rem,6rem,0rem,6rem);          
 
         }
         
@@ -226,12 +208,11 @@ img {
         font-size: 0.875rem ;
         font-weight: 600;
         line-height: 1.375rem;
-        color: #323232;
+        color: $primary-color;
 
         @include tablet {
-            padding-left: 2rem;
-            padding-right: 2rem;
             font-size: 1rem;
+            @include padding (0rem,2rem,0rem,2rem);
 
 
             &--top {
@@ -247,9 +228,8 @@ img {
         }
 
         @include desktop {
-            padding-left: 3rem;
-            padding-right: 3rem;
             width: 52rem;
+            @include padding (0rem,3rem,0rem,3rem);
             
             &--bottom {
                 font-size: 1.15rem;
@@ -263,17 +243,14 @@ img {
 // main text
 
 .main {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    @include padding (0rem,1rem,0rem,1rem);
 
-    @include tablet {
-        padding-left: 6rem;
-        padding-right: 6rem;        
+    @include tablet {  
+        @include padding (0rem,6rem,0rem,6rem);   
     }
 
     @include desktop {
-        padding-left: 14rem;
-        padding-right: 14rem; 
+        @include padding (0rem,14rem,0rem,14rem);
     }
 
 
@@ -281,7 +258,7 @@ img {
         margin-top: 0;
         font-size: 0.875rem;
         font-weight: 600;
-        color: #323232;
+        color: $primary-color;
 
         @include tablet {
             font-size: 1.5rem;
@@ -327,22 +304,17 @@ img {
         font-size: 1.5rem;
         font-weight: 600;
         margin: 0;
-        padding-top: 1rem;
-        color: #323232;
-        padding-left: 1rem;
-        padding-bottom: 1rem;
+        color: $primary-color;
+        @include padding (1rem,0,1rem,1rem);
 
         @include tablet {
             font-size: 2.25rem;
-            padding-left: 2rem;
-            padding-bottom: 2rem;
-            padding-top: 3rem;
+            @include padding (3rem,0,2rem,2rem);
         }
 
         @include desktop {
             font-size: 2.5rem;
-            padding-bottom: 3rem;
-            padding-left: 7.5rem;
+            @include padding (0,0,7.5rem,3rem);
         }
     }
 
@@ -353,9 +325,7 @@ img {
         margin: 0 auto;
         gap: 1rem;
         justify-content: center;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 1rem;
+        @include padding (0,1rem,1rem,1rem);
 
         @include tablet {
             gap: 1.5rem;
@@ -363,9 +333,7 @@ img {
         }
 
         @include desktop {
-            padding-left: 5.5rem;
-            padding-right: 5.5rem;
-            padding-bottom: 3rem;
+            @include padding (0,5.5rem,3rem,5.5rem);
         }
     }
 
@@ -383,14 +351,10 @@ img {
 //comment section
 
 .comment {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
+    @include padding (1rem,1rem,0rem,1rem);
 
     @include tablet {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        padding-top: 3rem;
+        @include padding (3rem,2rem,0rem,2rem);
     }
 
     @include desktop {
@@ -401,7 +365,7 @@ img {
     &__title {
         font-size: 1.5rem;
         font-weight: 600;
-        color: #323232;
+        color: $primary-color;
         padding-bottom: 1rem;
 
         @include tablet {
@@ -415,7 +379,7 @@ img {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        border-bottom: 1px solid silver;
+        border-bottom: 1px solid $primary2-color;
         padding-bottom: 1rem;
         gap: 1.375rem;
         
@@ -459,12 +423,11 @@ img {
         max-width: 100%;
         object-fit: cover;
         object-position: left;
-        background-color: #e1e1e1;
+        background-color: $secondary-color;
 
         @include tablet {
             height: 3rem;
             width: 3rem;
-            
         }
     }
 
@@ -479,7 +442,7 @@ img {
     &__label {
         font-size: 0.625rem;
         font-weight: 600;
-        color: silver;
+        color: $primary2-color;
         text-transform: uppercase;
         padding-bottom: 0.25rem;
 
@@ -508,8 +471,7 @@ img {
         }
 
         &--comment {
-            padding: 0.65rem;
-            padding-bottom: 4rem;
+            @include padding (0.65rem,0.65rem,4rem,0.65rem);
             border: 1.5px solid rgba(192, 192, 192, 0.5);
             border-radius: 0.25rem;
             font-size: 0.725rem;
@@ -527,14 +489,14 @@ img {
         }
 
         &--comment::placeholder {
-            color: #323232;
+            color: $primary-color;
             width: 100%;
             height: auto;
         }
     }
 
     &__input::placeholder {
-        color: #323232;
+        color: $primary-color;
     }
 
     &__btn {
@@ -543,16 +505,7 @@ img {
     }
 
     &__button {
-        padding: 10px 16px;
-        background-color: #323232;
-        color: #fff;
-        font-size: 1rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100%;
+        @include commentButton;
   
         &:hover {
           background-color: #000;
@@ -577,14 +530,13 @@ img {
             display: flex;
             justify-content: space-between;
             padding-top: 1rem;
-            border-bottom: 1px solid silver;
+            border-bottom: 1px solid $primary2-color;
             gap: 1.375rem;
 
             @include tablet {
                 width: 80%;
-                margin-left: 4rem;    
-                padding-top: 2rem;
-                padding-bottom: 1.5rem;  
+                margin-left: 4rem; 
+                @include padding (2rem,0rem,1.5rem,0rem);
                 gap: 0.5rem;                
             }
 
@@ -605,7 +557,7 @@ img {
     }
 
     &__date {
-        color: silver;
+        color: $primary2-color;
         margin: 0;
         
     }
@@ -633,21 +585,18 @@ img {
 // footer 
 
 .footer {
-    background-color: $bg-color;
+    background-color: $primary-color;
     color: white;
-    padding: 1rem;
-    padding-top: 2rem;
     margin-top: 1rem;
+    @include padding (2rem,1rem,1rem,1rem);
 
     @include tablet {
-        padding: 2rem;
-        padding-top: 3rem;
+        @include padding (3rem,2rem,2rem,2rem);
         margin-top: 2rem;
     }
 
     @include desktop {
-        padding-left: 8rem;
-        padding-top: 4rem;
+        @include padding (4rem,2rem,2rem,8rem);
     }
 
     &__intro {
@@ -774,9 +723,8 @@ img {
         }
 
         @include desktop {
-            padding-top: 2rem;
             font-size: 1rem;
-            padding-bottom: 1rem;
+            @include padding (2rem,0rem,1rem,0rem);
         }
     }
 }
