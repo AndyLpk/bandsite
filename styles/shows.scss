@@ -65,7 +65,7 @@ img {
         }
 
         @include desktop {
-            @include padding (2rem,0rem,2rem,0rem);
+            @include padding (1.5rem,0rem,1.5rem,0rem);
         }
         
 
@@ -127,11 +127,11 @@ img {
     display: flex;
     align-items: center;
     justify-content: flex-start ;
+    flex-wrap: wrap;
     padding-bottom: 2rem;
 
     @include tablet {
         flex-direction: row;
-        flex-wrap: wrap;
         height: 60vh;
         
     }
@@ -218,7 +218,7 @@ img {
         font-size: 1.5rem;
         font-weight: 600;
         text-transform: capitalize;
-        @include padding (2rem,0rem,0.75rem,1rem);
+        @include padding (1rem,0rem,0.75rem,1rem);
 
         @include tablet {
             font-size: 2.25rem;
@@ -283,6 +283,38 @@ img {
             }
         }
 
+        &--title {
+
+            display: none;
+
+            @include tablet {
+                display: flex;
+                border: 0;
+                color: $primary2-color;
+                font-weight: 400;
+                text-transform: uppercase;
+                @include padding (1rem,1rem,0rem,1rem);
+                
+            }
+
+            
+            @include desktop {
+                padding-top: 1rem;
+            }
+
+           
+        }
+
+        &--dummy {
+            display: none;
+
+            @include tablet {
+                display: flex;
+                width: 20%;
+            }
+            
+        }
+
         &--sub-title {
             font-size: 0.625rem;
             font-weight:600;
@@ -304,6 +336,7 @@ img {
 
             @include tablet {
                 width: 20%;
+                font-size: 0.875rem;
             }
             
         }
@@ -316,6 +349,7 @@ img {
 
             @include tablet {
                 width: 20%;
+                font-size: 0.875rem;
             }
         }
 
@@ -328,6 +362,7 @@ img {
             @include tablet {
                 padding-bottom: 0;
                 width: 20%;
+                font-size: 0.875rem;
             }
         }
 
@@ -341,40 +376,7 @@ img {
             }
 
         }
-
-        &--title {
-
-            display: none;
-
-            @include tablet {
-                display: flex;
-                border: 0;
-                color: $primary2-color;
-                font-weight: 400;
-                text-transform: uppercase;
-                @include padding (2rem,0rem,0rem,0rem);
-            }
-
-            
-            @include desktop {
-                padding-top: 1rem;
-            }
-
-           
-        }
-
-        &--dummy {
-            display: none;
-
-            @include tablet {
-                display: flex;
-                width: 20%;
-            }
-            
-        }
     }
-
-    
 }
 
 
@@ -387,7 +389,6 @@ img {
 
     @include tablet {
         @include padding (3rem,2rem,2rem,2rem);
-        margin-top: 2rem;
     }
 
     @include desktop {

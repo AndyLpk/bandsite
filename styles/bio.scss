@@ -314,7 +314,7 @@ img {
 
         @include desktop {
             font-size: 2.5rem;
-            @include padding (0,0,7.5rem,3rem);
+            @include padding (3rem,0,2rem,7.5rem);
         }
     }
 
