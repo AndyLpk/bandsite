@@ -1,46 +1,31 @@
-const commentForm = document.querySelector(".comment__form");
-const commentList = document.querySelector(".comment__section");
-const now = Date.now();
-const formattedDate = new Date(now).toLocaleDateString();
+const apiUrl = "https://project-1-api.herokuapp.com";
+const apiKey = "dda48748-90db-4914-88e1-8c44444dff0d";
 
-const commentData = [ 
-    {   name: "Connor Walton",
-        date: "02/17/2021",    
-        content: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    },
-    {   name: "Emilie Beach",    
-        date: "01/09/2021",    
-        content: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",  
-    },  
-    {   name: "Miles Acosta",    
-        date: "12/20/2020",    
-        content: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",  
-    },
-];
+function getComment() {
+  axios
+    .get(`${apiUrl}/comments?api_key=${apiKey}`)
+    .then((response) => {
+      const data = response.data;
+      
+      data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      
+      console.log(data);
+      commentList.innerHTML = "";
+      renderCommentEntries(data);
+      
+    })
+    .catch((error) => {
+      console.log("error: ", error);
+    });
+}
+getComment();
 
-commentForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const name = event.target.name.value;
-  const content = event.target.commentBox.value;
-
-  const newCommentEntry = {
-    name,
-    date: formattedDate,
-    content,
-  };
-
-  commentData.unshift(newCommentEntry);
-  renderCommentEntries();
-  event.target.reset();
-});
-
-function renderCommentEntries() {
+function renderCommentEntries(data) {
   commentList.innerHTML = "";
+  // console.log("data:",data)
+  data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-  commentData.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  for (let i = 0; i < commentData.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     const commentLi = document.createElement("li");
     commentLi.classList.add("comment__item", "comment__item--list");
 
@@ -58,18 +43,18 @@ function renderCommentEntries() {
     commentItem.classList.add("comment__top");
 
     const commentName = document.createElement("p");
-    commentName.innerText = commentData[i].name;
+    commentName.innerText = data[i].name;
     commentName.classList.add("comment__name");
 
     const commentDate = document.createElement("p");
-    commentDate.innerText = commentData[i].date;
+    commentDate.innerText = new Date(data[i].timestamp).toLocaleDateString('en-GB');
     commentDate.classList.add("comment__date");
 
     const commentFiller = document.createElement("div");
     commentFiller.classList.add("comment__filler");
 
     const commentContent = document.createElement("p");
-    commentContent.innerText = commentData[i].content;
+    commentContent.innerText = data[i].comment;
     commentContent.classList.add("comment__content");
 
     commentFiller.appendChild(commentContent);
@@ -84,4 +69,39 @@ function renderCommentEntries() {
     commentList.appendChild(commentLi);
   }
 }
-renderCommentEntries();
+
+
+
+
+const commentForm = document.querySelector(".comment__form");
+const commentList = document.querySelector(".comment__section");
+const now = Date.now();
+
+commentForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = event.target.name.value;
+  const comment = event.target.commentBox.value;
+console.log(name);
+console.log(comment);
+  const newCommentEntry = {
+    name,
+    comment,
+  };
+  
+  axios
+    .post(`${apiUrl}/comments?api_key=${apiKey}`, newCommentEntry)
+    .then((response) => {
+      console.log(response);
+      getComment();
+      renderCommentEntries();
+    })
+    .catch((error) => {
+      console.log("error:", error)
+    });
+
+  event.target.reset();
+
+});
+
+
