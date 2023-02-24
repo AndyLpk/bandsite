@@ -36,6 +36,7 @@ img {
 .header {
   background-color: #323232;
   width: 100%;
+  position: fixed;
 }
 .header__wrapper {
   display: flex;
@@ -395,7 +396,7 @@ img {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding-top: 1.25rem;
+  padding-top: 1rem;
   width: 2.75rem;
 }
 @media screen and (min-width: 768px) {
@@ -445,7 +446,7 @@ img {
   padding: 0.65rem;
   border: 1.5px solid rgba(192, 192, 192, 0.5);
   border-radius: 0.25rem;
-  font-size: 0.725rem;
+  font-size: 0.775rem;
   font-weight: 500;
   background-color: #fafafa;
   -webkit-border-radius: 0.25rem;
@@ -464,7 +465,7 @@ img {
   padding: 0.65rem 0.65rem 4rem 0.65rem;
   border: 1.5px solid rgba(192, 192, 192, 0.5);
   border-radius: 0.25rem;
-  font-size: 0.725rem;
+  font-size: 0.875rem;
   font-weight: 500;
   background-color: #fafafa;
   margin-bottom: 1rem;

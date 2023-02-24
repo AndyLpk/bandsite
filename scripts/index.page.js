@@ -21,7 +21,7 @@ function getComment() {
 getComment();
 
 function renderCommentEntries(data) {
-  commentList.innerHTML = "";
+  // commentList.innerHTML = "";  
   // console.log("data:",data)
   data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
