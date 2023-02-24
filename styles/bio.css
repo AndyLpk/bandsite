@@ -36,7 +36,6 @@ img {
 .header {
   background-color: #323232;
   width: 100%;
-  position: fixed;
 }
 .header__wrapper {
   display: flex;
@@ -584,6 +583,7 @@ img {
   .footer {
     padding: 3rem 2rem 2rem 2rem;
     margin-top: 2rem;
+    position: relative;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -688,15 +688,15 @@ img {
 @media screen and (min-width: 768px) {
   .footer__logo {
     padding: 0;
-    position: relative;
-    bottom: 12rem;
-    left: 36.5rem;
+    position: absolute;
+    top: 3.75rem;
+    right: 2.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__logo {
-    bottom: 15rem;
-    left: 56.75rem;
+    top: 4.75rem;
+    right: 8rem;
   }
 }
 .footer__description {

@@ -21,53 +21,52 @@ function getComment() {
 getComment();
 
 function renderCommentEntries(data) {
-  // commentList.innerHTML = "";  
   // console.log("data:",data)
-  data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-  for (let i = 0; i < data.length; i++) {
+  data.forEach(comment => {
     const commentLi = document.createElement("li");
     commentLi.classList.add("comment__item", "comment__item--list");
-
+  
     const commentBox = document.createElement("div");
     commentBox.classList.add("comment__header", "comment__header--list");
-
+  
     const commentImg = document.createElement("img");
     commentImg.classList.add("comment__img");
-
+  
     const commentForm = document.createElement("div");
     commentForm.classList.add("comment__wrapper");
-    
-
+      
+  
     const commentItem = document.createElement("div");
     commentItem.classList.add("comment__top");
-
+  
     const commentName = document.createElement("p");
-    commentName.innerText = data[i].name;
+    commentName.innerText = comment.name;
     commentName.classList.add("comment__name");
-
+  
     const commentDate = document.createElement("p");
-    commentDate.innerText = new Date(data[i].timestamp).toLocaleDateString('en-GB');
+    commentDate.innerText = new Date(comment.timestamp).toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });
     commentDate.classList.add("comment__date");
-
+  
     const commentFiller = document.createElement("div");
     commentFiller.classList.add("comment__filler");
-
+  
     const commentContent = document.createElement("p");
-    commentContent.innerText = data[i].comment;
+    commentContent.innerText = comment.comment;
     commentContent.classList.add("comment__content");
-
+  
     commentFiller.appendChild(commentContent);
     commentItem.appendChild(commentName);
     commentItem.appendChild(commentDate);
     commentForm.appendChild(commentItem);
     commentForm.appendChild(commentFiller);
     commentBox.appendChild(commentImg);
-        
+          
     commentLi.appendChild(commentBox);
     commentLi.appendChild(commentForm);
     commentList.appendChild(commentLi);
-  }
+  });
+  
 }
 
 

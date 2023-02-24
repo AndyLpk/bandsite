@@ -389,6 +389,7 @@ img {
 
     @include tablet {
         @include padding (3rem,2rem,2rem,2rem);
+        position: relative
     }
 
     @include desktop {
@@ -499,14 +500,14 @@ img {
 
         @include tablet {
             padding: 0;
-            position: relative;
-            bottom: 12rem;
-            left: 36.5rem;
+            position: absolute;
+            top: 3.75rem;
+            right: 2.5rem;
         }
 
         @include desktop {
-            bottom: 15rem;
-            left: 56.75rem;
+            top: 4.75rem;
+            right: 8rem;
         }
     }
 
