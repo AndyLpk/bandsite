@@ -207,6 +207,7 @@ img {
 @media screen and (min-width: 1280px) {
   .main {
     display: flex;
+    justify-content: space-evenly;
   }
 }
 .main__title {
@@ -224,12 +225,14 @@ img {
 @media screen and (min-width: 1280px) {
   .main__title {
     width: 20%;
+    padding-left: 5.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .main__container {
-    width: 75%;
+    width: 70%;
     padding-top: 3rem;
+    padding-right: 4rem;
   }
 }
 .main__item {

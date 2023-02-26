@@ -88,8 +88,8 @@ img {
             color: white;
             font-weight: 600;            
         }
-    } 
-   
+
+    }   
     
 }
 
@@ -211,6 +211,7 @@ img {
 
     @include desktop {
         display: flex;
+        justify-content: space-evenly;
     }
 
 
@@ -227,14 +228,16 @@ img {
 
         @include desktop {
            width: 20%;
+           padding-left: 5.5rem;
         }
     }
 
     &__container {
         
         @include desktop {
-            width: 75%;
+            width: 70%;
             padding-top: 3rem;
+            padding-right: 4rem;
         }
     }
 
